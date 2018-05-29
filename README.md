@@ -6,13 +6,18 @@ ReFex is a structural graph feature extraction algorithm which creates binary fe
 RolX is an algorithm which takes features extracted with ReFeX and factorizes the binary node-feature matrix in order to create low dimensional structural node representations. Nodes with similar structural features will be clustered together in the latent space. The original model uses non-negative matrix factorization, in our work we use an implicit matrix factorization model which is trained with a potent variant of gradient descent. Our implementation supports GPU use.
 </p>
 
-This repository provides a custom implementation for reFex and RolX as described in the papers:
+This repository provides a custom implementation for ReFex and RolX as described in the papers:
 
 > It's who you know: graph mining using recursive structural features.
 > Keith Henderson, Brian Gallagher, Lei Li, Leman Akoglu, Tina Eliassi-Rad, Hanghang Tong and Christos Faloutsos.
 > Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining.
 > http://www.cs.cmu.edu/~leili/pubs/henderson-kdd2011.pdf
 
+
+> It's who you know: graph mining using recursive structural features.
+> Keith Henderson, Brian Gallagher, Lei Li, Leman Akoglu, Tina Eliassi-Rad, Hanghang Tong and Christos Faloutsos.
+> Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining.
+> http://www.cs.cmu.edu/~leili/pubs/henderson-kdd2011.pdf
 
 ### Requirements
 
