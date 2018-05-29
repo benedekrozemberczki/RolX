@@ -40,11 +40,11 @@ The code takes an input graph in a csv file. Every row indicates an edge between
 
 ### Logging
 
-The models are defined in a way that parameter settings, extracted features and factoprization loss are logged in every single epoch. Specifically we log the followings:
+The models are defined in a way that parameter settings, extracted features and factorization loss are logged in every single epoch. Specifically we log the followings:
 
 ```
 1. Hyperparameter settings.                  We save each hyperparameter used in the experiment.
-3. Number of extracted features per epoch.   We take the number of features before and after prunning.
+3. Number of extracted features per epoch.   We take the number of features before and after pruning.
 2. Cost per epoch.                           Reconstruction cost is stored in every iteration.
 4. Runtime.                                  We measure the time needed for feature extraction and optimization -- measured by seconds.
 ```
