@@ -85,21 +85,22 @@ The feature extraction and factorization are handled by the `src/main.py` script
 
 ### Examples
 
-The following commands learn a graph embedding and cluster center and writes them to disk. The node representations are ordered by the ID.
+The following commands create structural features, learn a graph embedding and write these to disk. The node representations are ordered by the ID.
 
-Creating a GRAF embedding of the default dataset with the default hyperparameter settings. Saving the embedding, cluster centres and the log file at the default path.
+Creating a RolX embedding of the default dataset with the default hyperparameter settings. Saving the ReFeX features, RolX embedding and the log file at the default path.
 
 ```
-python src/factorizer.py
+python src/main.py
 ```
 Creating an embedding of an other dataset the `Facebook Companies`. Saving the output and the log in a custom place.
 
 ```
-python src/factorizer.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv --recursive-features-output output/features/tvhsow_features.csv --log-output output/logs/tvshow_log.json
+python src/main.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv --recursive-features-output output/features/company_features.csv --log-output output/logs/company_log.json
 ```
 
-Creating an embedding of the default dataset in 128 dimensions and 8 binary feature bins.
+Creating an embedding of the default dataset in 128 dimensions with 8 binary feature bins.
 
 ```
-python src/factorizer.py --dimensions 128 --bins 8
+python src/main.py --dimensions 128 --bins 8
+
 ```
