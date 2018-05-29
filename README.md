@@ -1,5 +1,5 @@
-# GRAF
-Inner product graph factorization machine.
+# ReFeX and RolX
+Recursive structural feature and role extraction machine.
 <p align="justify">
 GRAF is a graph embedding algorithm which learns a clustering based on features extracted with an inner product graph factorization machine. The procedure places nodes in an abstract feature space where the inner product of node features reconstructs the neighbourhood overlap matrix. GRAF is a specific application of an inner product factorization machine. The implementation supports GPU use.
 </p>
@@ -100,13 +100,3 @@ Creating a clustered embedding of the default dataset in 128 dimensions and 10 c
 ```
 python src/factorizer.py --dimensions 128 --cluster-number 10
 ```
-
-### Citing
-
-If you find GRAF useful in your research, please consider citing the following paper:
-
->@misc{rozemberczki2018GEMSEC,    
-  author={Benedek Rozemberczki and Ryan Davies and Rik Sarkar and Charles Sutton},    
-  title={GEMSEC: Graph Embedding with Self Clustering},   
-  year={2018},    
-  eprint={arXiv:1802.03997}}
