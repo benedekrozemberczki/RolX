@@ -14,10 +14,10 @@ This repository provides a custom implementation for ReFex and RolX as described
 > http://www.cs.cmu.edu/~leili/pubs/henderson-kdd2011.pdf
 
 
-> It's who you know: graph mining using recursive structural features.
-> Keith Henderson, Brian Gallagher, Lei Li, Leman Akoglu, Tina Eliassi-Rad, Hanghang Tong and Christos Faloutsos.
-> Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining.
-> http://www.cs.cmu.edu/~leili/pubs/henderson-kdd2011.pdf
+> RolX: Structural Role Extraction & Mining in Large Graphs
+> Keith Henderson, Brian Gallagher, Tina Eliassi-Rad, Hanghang Tong, Sugato Basu, Leman Akoglu, Danai Koutra, Christos Faloutsos and Lei Li.
+> Proceedings of the 18th ACM SIGKDD international conference on Knowledge discovery and data mining.
+> https://web.eecs.umich.edu/~dkoutra/papers/12-kdd-recursiverole.pdf
 
 ### Requirements
 
