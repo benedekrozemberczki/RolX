@@ -3,21 +3,11 @@ Recursive structural feature and role extraction machine.
 <p align="justify">
 ReFex is a structural graph feature extraction algorithm which creates binary features which describe structural properties of nodes in a large graph. First, continuous features are extracted based on descriptive statistics of neighbourhoods. These statistics are aggregated recursively. The original algorithm was extended in this implementation in such way that more advanced descriptive statistics can be extracted during the recursion phase. In addition, the number of feature extraction recursions and the binary binning also have controllable parameters. Finally, the strongly correlated features can be dropped based on an arbitrarily  chosen threshold.
   
-RolX is an algorithm which takes features extracted with ReFeX and factorizes the binary node-feature matrix in order to create low dimensional node representations. The original model uses non-negative matrix factorization, in our work we use an implicit matrix factorization model which is trained with a potent variant of gradient descent. Our implementation supports GPU use.
+RolX is an algorithm which takes features extracted with ReFeX and factorizes the binary node-feature matrix in order to create low dimensional structural node representations. Nodes with similar structural features will be clustered together in the latent space. The original model uses non-negative matrix factorization, in our work we use an implicit matrix factorization model which is trained with a potent variant of gradient descent. Our implementation supports GPU use.
 </p>
 
-@inproceedings{henderson2011s,
-  title={It's who you know: graph mining using recursive structural features},
-  author={Henderson, Keith and Gallagher, Brian and Li, Lei and Akoglu, Leman and Eliassi-Rad, Tina and Tong, Hanghang and Faloutsos, Christos},
-  booktitle={Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining},
-  pages={663--671},
-  year={2011},
-  organization={ACM}
-}
+This repository provides a custom implementation for reFex and RolX as described in the papers:
 
-
-
-This repository provides a reference implementation for GRAF as it is used as a benchmark in the paper:
 > It's who you know: graph mining using recursive structural features.
 > Keith Henderson, Brian Gallagher, Lei Li, Leman Akoglu, Tina Eliassi-Rad, Hanghang Tong and Christos Faloutsos.
 > Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining.
