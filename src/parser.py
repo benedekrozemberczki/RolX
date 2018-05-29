@@ -15,7 +15,7 @@ def parameter_parser():
 
     parser.add_argument('--input',
                         nargs = '?',
-                        default = './input/food_edges.csv',
+                        default = './input/tvshow_edges.csv',
 	                help = 'Input graph path.')
 
     parser.add_argument('--recursive-features-output',
