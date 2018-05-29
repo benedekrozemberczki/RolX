@@ -39,18 +39,18 @@ The code takes an input graph in a csv file. Every row indicates an edge between
 
 ### Logging
 
-The models are defined in a way that parameter settings and cluster quality is logged in every single epoch. Specifically we log the followings:
+The models are defined in a way that parameter settings, extracted features and factoprization loss are logged in every single epoch. Specifically we log the followings:
 
 ```
-1. Hyperparameter settings.     We save each hyperparameter used in the experiment.
-2. Cost per epoch.              Reconstruction cost is stored depending on the model type.
-3. Cluster quality.             Measured by modularity. We calculate it based on k-means clustering per epoch.
-4. Runtime.                     We measure the time needed for optimization -- measured by seconds.
+1. Hyperparameter settings.                  We save each hyperparameter used in the experiment.
+3. Number of extracted features per epoch.   We take the number of features before and after prunning.
+2. Cost per epoch.                           Reconstruction cost is stored in every iteration.
+4. Runtime.                                  We measure the time needed for feature extraction and optimization -- measured by seconds.
 ```
 
 ### Options
 
-Learning of the embedding is handled by the `src/factorizer.py` script which provides the following command line arguments.
+The feature extraction and factorization are handled by the `src/main.py` script which provides the following command line arguments.
 
 #### Input and output options
 
@@ -92,20 +92,15 @@ Creating a GRAF embedding of the default dataset with the default hyperparameter
 python src/factorizer.py
 ```
 
-Turning off the model saving.
-
-```
-python src/factorizer.py --dump-matrices False
-```
 
 Creating an embedding of an other dataset the `Facebook Companies`. Saving the output and the log in a custom place.
 
 ```
-python src/factorizer.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv --log-output output/cluster_means/company_means.csv
+python src/factorizer.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv
 ```
 
-Creating a clustered embedding of the default dataset in 128 dimensions and 10 cluster centers.
+Creating an embedding of the default dataset in 128 dimensions and 8 binary feature bins.
 
 ```
-python src/factorizer.py --dimensions 128 --cluster-number 10
+python src/factorizer.py --dimensions 128 --bins 8
 ```
