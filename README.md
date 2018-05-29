@@ -2,7 +2,8 @@
 Recursive structural feature and role extraction machine.
 <p align="justify">
 ReFex is a structural graph feature extraction algorithm which creates binary features which describe structural properties of nodes in a large graph. First, continuous features are extracted based on descriptive statistics of neighbourhoods. These statistics are aggregated recursively. The original algorithm was extended in this implementation in such way that more advanced descriptive statistics can be extracted during the recursion phase. In addition, the number of feature extraction recursions and the binary binning also have controllable parameters. Finally, the strongly correlated features can be dropped based on an arbitrarily  chosen threshold.
-  
+</p>
+<p align="justify">
 RolX is an algorithm which takes features extracted with ReFeX and factorizes the binary node-feature matrix in order to create low dimensional structural node representations. Nodes with similar structural features will be clustered together in the latent space. The original model uses non-negative matrix factorization, in our work we use an implicit matrix factorization model which is trained with a potent variant of gradient descent. Our implementation supports GPU use.
 </p>
 
@@ -55,19 +56,19 @@ The feature extraction and factorization are handled by the `src/main.py` script
 #### Input and output options
 
 ```
-  --input STR                   Input graph path.                                 Default is `data/politician_edges.csv`.
-  --embedding-output STR        Embeddings path.                                  Default is `output/embeddings/politician_embedding.csv`.
-  --recursive-features-output         Cluster centers path.                             Default is `output/cluster_means/politician_means.csv`.
-  --log-output STR              Log path.                                         Default is `output/logs/politician.log`.
+  --input STR                   Input graph path.                                 Default is `data/tvshow_edges.csv`.
+  --embedding-output STR        Embeddings path.                                  Default is `output/embeddings/tvhsow_embedding.csv`.
+  --recursive-features-output   Recursive features path.                          Default is `output/features/tvhsow_features.csv`.
+  --log-output STR              Log path.                                         Default is `output/logs/tvhsow.log`.
 ```
 
 #### ReFeX options
 
 ```
-  --recursive-iterations INT                    Number of epochs.                                   Default is 10.
-  --bins INT                Number of edges in batch.                           Default is 128.
-  --aggregator STR          Target edge weight strategy.                        Default is `overlap`.
-  --pruning-cutoff FLOAT   Initial learning rate.                              Default is 0.01.
+  --recursive-iterations INT      Number of recursions.                               Default is 3.
+  --bins INT                      Number of binarization bins.                        Default is 4.
+  --aggregator STR                Aggregation strategy (simple/complex).              Default is `simple`.
+  --pruning-cutoff FLOAT          Absolute correlation for feature dropping.          Default is 0.9.
 ```
 
 #### RolX options
@@ -79,7 +80,7 @@ The feature extraction and factorization are handled by the `src/main.py` script
   --initial-learning-rate FLOAT   Initial learning rate.                              Default is 0.01.
   --minimal-learning-rate FLOAT   Final learning rate.                                Default is 0.001.
   --annealing-factor FLOAT        Annealing factor for learning rate.                 Default is 1.0.
-  --lambd FLOAR                   Weight regularization penalty.                      Default is 2**-4.
+  --lambd FLOAT                   Weight regularization penalty.                      Default is 10**-3.
 ```
 
 ### Examples
@@ -91,12 +92,10 @@ Creating a GRAF embedding of the default dataset with the default hyperparameter
 ```
 python src/factorizer.py
 ```
-
-
 Creating an embedding of an other dataset the `Facebook Companies`. Saving the output and the log in a custom place.
 
 ```
-python src/factorizer.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv
+python src/factorizer.py --input data/company_edges.csv  --embedding-output output/embeddings/company_embedding.csv --recursive-features-output output/features/tvhsow_features.csv --log-output output/logs/tvshow_log.json
 ```
 
 Creating an embedding of the default dataset in 128 dimensions and 8 binary feature bins.
