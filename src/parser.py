@@ -3,7 +3,7 @@ import argparse
 def parameter_parser():
 
     """
-    A method to parse up command line parameters. By default it gives an embedding of the Facebook politicians network.
+    A method to parse up command line parameters. By default it gives an embedding of the Facebook tvshow network.
     The default hyperparameters give a good quality representation and good candidate cluster means without grid search.
     """
 
