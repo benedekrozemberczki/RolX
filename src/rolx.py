@@ -2,16 +2,12 @@ import random
 import numpy as np
 import math
 import time
-
 import networkx as nx
 import tensorflow as tf
-
 from tqdm import tqdm
 
 from layers import Factorization
-
 from print_and_read import log_setup, tab_printer, epoch_printer, log_updater, data_reader, data_saver
-
 from refex import RecursiveExtractor
 
 class Model(object):
@@ -33,7 +29,6 @@ class Model(object):
         self.true_step_size = (self.user_size * self.args.epochs)/self.args.batch_size
         self.build()
 
-
     def build(self):
         """
         Building the model.
@@ -54,7 +49,7 @@ class Model(object):
         
 class ROLX(Model):
     """
-    Regularized GRAFCODE class.
+    ROLX class.
     """
     def build(self):
         """
@@ -77,19 +72,16 @@ class ROLX(Model):
                                                                self.args.annealing_factor)
     
             self.train_op = tf.train.AdamOptimizer(self.learning_rate_new).minimize(self.loss, global_step = self.batch)
-    
             self.init = tf.global_variables_initializer()
 
 
-    def feed_dict_generator(self, nodes, step):
-        
+    def feed_dict_generator(self, nodes, step):    
         """
         Method to generate left and right handside matrices, proper time index and overlap vector.
         """
 
         left_nodes = np.array(nodes)
         right_nodes = np.array([i for i in range(0,self.feature_size)])
-      
 
         targets = self.dataset[nodes,:]
 
@@ -102,7 +94,7 @@ class ROLX(Model):
 
     def train(self):
         """
-        Method for training the embedding, logging and this method is inherited by GEMSEC and DeepWalk variants without an override.
+        Method for training the embedding, logging.
         """ 
         self.current_step = 0
         self.log = log_setup(self.args)
@@ -132,6 +124,4 @@ class ROLX(Model):
                 tab_printer(self.log)
             self.features = self.factorization_layer.embedding_node.eval()
             data_saver(self.features, self.args.embedding_output)
-            
-
-
+ 
