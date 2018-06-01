@@ -31,10 +31,8 @@ class Factorization:
         """
         Calculating the predictive loss.
         """
-
         self.embedding_left = tf.nn.embedding_lookup(self.embedding_node , self.edge_indices_left) 
         self.embedding_right = tf.nn.embedding_lookup(self.embedding_feature, self.edge_indices_right)
-
 
         self.embedding_predictions = tf.sigmoid(tf.matmul(self.embedding_left, tf.transpose(self.embedding_right)))
 
