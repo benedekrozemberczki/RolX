@@ -3,7 +3,7 @@ from rolx import ROLX
 
 def create_and_run_model(args):
     """
-    Function to read the graph, create an embedding and train it.
+    Function to read the graph, create features and train the embedding.
     """
     model = ROLX(args)   
     model.train()
