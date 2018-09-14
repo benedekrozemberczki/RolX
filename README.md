@@ -3,6 +3,11 @@ Recursive structural feature and role extraction machine.
 <p align="justify">
 ReFex is a structural graph feature extraction algorithm which creates binary features which describe structural properties of nodes in a large graph. First, continuous features are extracted based on descriptive statistics of neighbourhoods. These statistics are aggregated recursively. The original algorithm was extended in this implementation in such way that more advanced descriptive statistics can be extracted during the recursion phase. In addition, the number of feature extraction recursions and the binary binning also have controllable parameters. Finally, the strongly correlated features can be dropped based on an arbitrarily  chosen threshold.
 </p>
+
+<p align="center">
+  <img width="720" src="structural.jpeg">
+</p>
+
 <p align="justify">
 RolX is an algorithm which takes features extracted with ReFeX and factorizes the binary node-feature matrix in order to create low dimensional structural node representations. Nodes with similar structural features will be clustered together in the latent space. The original model uses non-negative matrix factorization, in our work we use an implicit matrix factorization model which is trained with a potent variant of gradient descent. Our implementation supports GPU use.
 </p>
