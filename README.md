@@ -61,31 +61,31 @@ The feature extraction and factorization are handled by the `src/main.py` script
 #### Input and output options
 
 ```
-  --input STR                   Input graph path.                                 Default is `data/tvshow_edges.csv`.
-  --embedding-output STR        Embeddings path.                                  Default is `output/embeddings/tvhsow_embedding.csv`.
-  --recursive-features-output   Recursive features path.                          Default is `output/features/tvhsow_features.csv`.
-  --log-output STR              Log path.                                         Default is `output/logs/tvhsow.log`.
+  --input                        STR   Input graph path.           Default is `data/tvshow_edges.csv`.
+  --embedding-output             STR   Embeddings path.            Default is `output/embeddings/tvhsow_embedding.csv`.
+  --recursive-features-output    STR   Recursive features path.    Default is `output/features/tvhsow_features.csv`.
+  --log-output                   STR   Log path.                   Default is `output/logs/tvhsow.log`.
 ```
 
 #### ReFeX options
 
 ```
-  --recursive-iterations INT      Number of recursions.                               Default is 3.
-  --bins INT                      Number of binarization bins.                        Default is 4.
-  --aggregator STR                Aggregation strategy (simple/complex).              Default is `simple`.
-  --pruning-cutoff FLOAT          Absolute correlation for feature dropping.          Default is 0.9.
+  --recursive-iterations  INT      Number of recursions.                                Default is 3.
+  --bins                  INT      Number of binarization bins.                         Default is 4.
+  --aggregator            STR      Aggregation strategy (simple/complex).               Default is `simple`.
+  --pruning-cutoff        FLOAT    Absolute correlation for feature dropping.           Default is 0.9.
 ```
 
 #### RolX options
 
 ```
-  --epochs INT                    Number of epochs.                                   Default is 10.
-  --batch-size INT                Number of edges in batch.                           Default is 32.
-  --dimensions INT                Number of dimensions.                               Default is 16.
-  --initial-learning-rate FLOAT   Initial learning rate.                              Default is 0.01.
-  --minimal-learning-rate FLOAT   Final learning rate.                                Default is 0.001.
-  --annealing-factor FLOAT        Annealing factor for learning rate.                 Default is 1.0.
-  --lambd FLOAT                   Weight regularization penalty.                      Default is 10**-3.
+  --epochs                  INT       Number of epochs.                           Default is 10.
+  --batch-size              INT       Number of edges in batch.                   Default is 32.
+  --dimensions              INT       Number of dimensions.                       Default is 16.
+  --initial-learning-rate   FLOAT     Initial learning rate.                      Default is 0.01.
+  --minimal-learning-rate   FLOAT     Final learning rate.                        Default is 0.001.
+  --annealing-factor        FLOAT     Annealing factor for learning rate.         Default is 1.0.
+  --lambd                   FLOAT     Weight regularization penalty.              Default is 10**-3.
 ```
 
 ### Examples
