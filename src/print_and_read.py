@@ -28,11 +28,11 @@ def tab_printer(log):
     Function to print the logs in a nice tabular format.
     """    
     t = Texttable() 
-    t.add_rows([['Epoch', log["losses"][-1][0]]])
+    t.add_rows([["Epoch", log["losses"][-1][0]]])
     print t.draw()
 
     t = Texttable()
-    t.add_rows([['Loss', round(log["losses"][-1][1],3)]])
+    t.add_rows([["Loss", round(log["losses"][-1][1],3)]])
     print t.draw()   
 
 def epoch_printer(repetition):

@@ -15,7 +15,7 @@ class Factorization:
         self.user_size = user_size
         self.feature_size = feature_size 
 
-        self.target = tf.placeholder(tf.int64, shape=[None,None])
+        self.target = tf.placeholder(tf.int64, shape=[None, None])
         self.edge_indices_left = tf.placeholder(tf.int64, shape=[None])
         self.edge_indices_right = tf.placeholder(tf.int64, shape=[None])
 

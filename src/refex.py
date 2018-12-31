@@ -27,7 +27,7 @@ def aggregator(x):
     return [np.sum(x),np.mean(x)]
 
 def state_printer(x):
-    print('-'*80)
+    print("-"*80)
     print(x)
     print("")
 
