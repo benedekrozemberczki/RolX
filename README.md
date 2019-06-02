@@ -24,6 +24,8 @@ This repository provides a custom implementation for ReFex and RolX as described
 > Proceedings of the 18th ACM SIGKDD international conference on Knowledge discovery and data mining.
 > https://web.eecs.umich.edu/~dkoutra/papers/12-kdd-recursiverole.pdf
 
+Another Python implementation is available [[here]](https://github.com/dkaslovsky/GraphRole).
+
 ### Requirements
 
 The codebase is implemented in Python 2.7.
