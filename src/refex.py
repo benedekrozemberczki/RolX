@@ -1,11 +1,10 @@
+import math
+import random
+import scipy.stats
 import numpy as np
 import pandas as pd
 import networkx as nx
-import math
 from tqdm import tqdm
-import random
-import pandas as pd
-import scipy.stats
 from parser import parameter_parser
 
 def dataset_reader(path):
