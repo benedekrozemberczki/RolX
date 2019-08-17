@@ -1,14 +1,13 @@
-import random
-import numpy as np
 import math
 import time
+import random
+import numpy as np
 import networkx as nx
-import tensorflow as tf
 from tqdm import tqdm
-
+import tensorflow as tf
 from layers import Factorization
-from print_and_read import log_setup, tab_printer, epoch_printer, log_updater, data_reader, data_saver
 from refex import RecursiveExtractor
+from print_and_read import log_setup, tab_printer, epoch_printer, log_updater, data_reader, data_saver
 
 class Model(object):
     """
@@ -124,4 +123,3 @@ class ROLX(Model):
                 tab_printer(self.log)
             self.features = self.factorization_layer.embedding_node.eval()
             data_saver(self.features, self.args.embedding_output)
- 
