@@ -83,7 +83,6 @@ class RecursiveExtractor:
         return new_features
 
     def do_recursions(self):
-
         for recursion in range(0,self.args.recursive_iterations):
             state_printer("Recursion round: " + str(recursion+1) + ".")
             new_features = self.single_recursion(recursion)
@@ -101,9 +100,9 @@ class RecursiveExtractor:
             except:
                 pass
         self.new_features = pd.concat(self.new_features, axis = 1)
+        
     def dump_to_disk(self):
         self.new_features.columns = map(lambda x: "x_" + str(x), range(0,self.new_features.shape[1]))
-
         self.new_features.to_csv(self.args.recursive_features_output, index = None)
 
     def create_features(self):
