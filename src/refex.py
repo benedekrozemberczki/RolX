@@ -42,7 +42,6 @@ def sub_selector(old_features, new_features, pruning_threshold):
         keep = list(set(range(0,new_features.shape[1])).difference(indices))
         new_features = new_features[:,keep]
         indices = set()
-    
     return new_features
 
 
@@ -74,7 +73,6 @@ class RecursiveExtractor:
         print("") 
         del self.base_features
     
-
     def single_recursion(self, i):
         features_from_previous_round = self.features[i].shape[1]
         new_features = np.zeros((len(self.nodes), features_from_previous_round*self.multiplier))
