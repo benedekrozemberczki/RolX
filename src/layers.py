@@ -1,6 +1,6 @@
-import tensorflow as tf
 import math
 import numpy as np
+import tensorflow as tf
 
 class Factorization:
     """
@@ -26,7 +26,6 @@ class Factorization:
         self.embedding_feature = tf.Variable(tf.random_uniform([self.feature_size, self.args.dimensions],
                                             -0.1/self.args.dimensions, 0.1/self.args.dimensions))
       
-
     def __call__(self):
         """
         Calculating the predictive loss.
