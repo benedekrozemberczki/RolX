@@ -1,8 +1,8 @@
+import json
+import numpy as np
 import pandas as pd
 import networkx as nx
 from texttable import Texttable
-import json
-import numpy as np
 
 def data_reader(input_path):
     """
@@ -21,7 +21,6 @@ def log_setup(args_in):
     log["new_features_added"] = []
     log["params"] = vars(args_in)
     return log
-
 
 def tab_printer(log):
     """
