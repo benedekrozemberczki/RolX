@@ -56,23 +56,17 @@ class ROLX(Model):
         """        
         self.computation_graph = tf.Graph()
         with self.computation_graph.as_default():
-
             self.factorization_layer =  Factorization(self.args, self.user_size, self.feature_size)
-
             self.loss = self.factorization_layer()
-
             self.batch = tf.Variable(0)
             self.step = tf.placeholder("float")
-    
             self.learning_rate_new = tf.train.polynomial_decay(self.args.initial_learning_rate,
                                                                self.batch,
                                                                self.true_step_size,
                                                                self.args.minimal_learning_rate,
                                                                self.args.annealing_factor)
-    
             self.train_op = tf.train.AdamOptimizer(self.learning_rate_new).minimize(self.loss, global_step = self.batch)
             self.init = tf.global_variables_initializer()
-
 
     def feed_dict_generator(self, nodes, step):    
         """
