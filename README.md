@@ -42,11 +42,13 @@ texttable         1.2.1
 
 ### Datasets
 
-The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Facebook TVshows` dataset is included in the  `data/` directory.
+<p align="justify">
+The code takes an input graph in a csv file. Every row indicates an edge between two nodes separated by a comma. The first row is a header. Nodes should be indexed starting with 0. A sample graph for the `Facebook TVshows` dataset is included in the  `data/` directory.</p>
 
 ### Logging
 
-The models are defined in a way that parameter settings, extracted features and factorization loss are logged in every single epoch. Specifically we log the followings:
+<p align="justify">
+The models are defined in a way that parameter settings, extracted features and factorization loss are logged in every single epoch. Specifically we log the followings:</p>
 
 ```
 1. Hyperparameter settings.                  We save each hyperparameter used in the experiment.
@@ -57,7 +59,8 @@ The models are defined in a way that parameter settings, extracted features and 
 
 ### Options
 
-The feature extraction and factorization are handled by the `src/main.py` script which provides the following command line arguments.
+<p align="justify">
+The feature extraction and factorization are handled by the `src/main.py` script which provides the following command line arguments.</p>
 
 #### Input and output options
 
@@ -91,9 +94,11 @@ The feature extraction and factorization are handled by the `src/main.py` script
 
 ### Examples
 
-The following commands create structural features, learn a graph embedding and write these to disk. The node representations are ordered by the ID.
+<p align="justify">
+The following commands create structural features, learn a graph embedding and write these to disk. The node representations are ordered by the ID.</p>
 
-Creating a RolX embedding of the default dataset with the default hyperparameter settings. Saving the ReFeX features, RolX embedding and the log file at the default path.
+<p align="justify">
+Creating a RolX embedding of the default dataset with the default hyperparameter settings. Saving the ReFeX features, RolX embedding and the log file at the default path.</p>
 
 ```
 python src/main.py
@@ -108,5 +113,4 @@ Creating an embedding of the default dataset in 128 dimensions with 8 binary fea
 
 ```
 python src/main.py --dimensions 128 --bins 8
-
 ```
