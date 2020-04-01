@@ -1,4 +1,4 @@
-# ReFeX and RolX ![GitHub stars](https://img.shields.io/github/stars/benedekrozemberczki/RolX.svg?style=plastic) ![GitHub forks](https://img.shields.io/github/forks/benedekrozemberczki/RolX.svg?color=blue&style=plastic) ![License](https://img.shields.io/github/license/benedekrozemberczki/RolX.svg?color=blue&style=plastic)
+# ReFeX and RolX ![License](https://img.shields.io/github/license/benedekrozemberczki/RolX.svg?color=blue&style=plastic)
 <p align="justify">
 ReFex is a structural graph feature extraction algorithm which creates binary features which describe structural properties of nodes in a large graph. First, continuous features are extracted based on descriptive statistics of neighbourhoods. These statistics are aggregated recursively. The original algorithm was extended in this implementation in such way that more advanced descriptive statistics can be extracted during the recursion phase. In addition, the number of feature extraction recursions and the binary binning also have controllable parameters. Finally, the strongly correlated features can be dropped based on an arbitrarily  chosen threshold.
 </p>
