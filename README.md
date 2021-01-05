@@ -1,6 +1,5 @@
 ReFeX and RolX
 ===============================================
-![License](https://img.shields.io/github/license/benedekrozemberczki/RolX.svg?color=blue&style=plastic)
 [![codebeat badge](https://codebeat.co/badges/f688b042-0641-4aa7-a122-9719e3372ca9)](https://codebeat.co/projects/github-com-benedekrozemberczki-rolx-master) [![repo size](https://img.shields.io/github/repo-size/benedekrozemberczki/RolX.svg)](https://github.com/benedekrozemberczki/RolX/archive/master.zip)
 
 <p align="justify">
