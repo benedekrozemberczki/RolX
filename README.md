@@ -118,3 +118,11 @@ Creating an embedding of the default dataset in 128 dimensions with 8 binary fea
 ```
 python src/main.py --dimensions 128 --bins 8
 ```
+
+
+
+--------------------------------------------------------------------------------
+
+**License**
+
+- [GNU](https://github.com/benedekrozemberczki/RolX/blob/master/LICENSE)
