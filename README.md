@@ -16,7 +16,7 @@ RolX is an algorithm which takes features extracted with ReFeX and factorizes th
 
 This repository provides a custom implementation for **ReFex** and **RolX** as described in the papers:
 
-> **It's who you know: graph mining using recursive structural features.**
+> *It's who you know: graph mining using recursive structural features.*
 > Keith Henderson, Brian Gallagher, Lei Li, Leman Akoglu, Tina Eliassi-Rad, Hanghang Tong and Christos Faloutsos.
 > Proceedings of the 17th ACM SIGKDD international conference on Knowledge discovery and data mining.
 > [[Paper]](http://www.cs.cmu.edu/~leili/pubs/henderson-kdd2011.pdf)
