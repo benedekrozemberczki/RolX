@@ -126,4 +126,4 @@ python src/main.py --dimensions 128 --bins 8
 
 - [GNU](https://github.com/benedekrozemberczki/RolX/blob/master/LICENSE)
 
---------------------------------------------------------------------------------
+----------------------------------------------------------------
